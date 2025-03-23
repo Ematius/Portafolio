@@ -1,0 +1,31 @@
+nav{
+  width: 100%;
+  position: fixed;
+    ul{
+      list-style-type: none;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      color: var(--color-quaternary);
+      font-size: var(--font-md);
+      font-weight: var(--weight-400);
+      margin: 1rem;
+        li{
+          margin: .5rem;
+          padding-right: .5rem;
+          a{
+            span{
+              margin: .5rem;
+              padding-left: .5rem;
+            }
+          }
+          a.active {
+              font-weight: var(--weight-700);
+              font-size: var(--font-lg);
+              border-bottom: 2px solid currentColor;
+            }
+
+        }
+    }
+}
+

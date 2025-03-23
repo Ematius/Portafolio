@@ -1,0 +1,94 @@
+@keyframes appearFromDepth {
+  0% {
+    transform: translateZ(-500px);
+    opacity: 0;
+    filter: blur(4px);
+  }
+
+  25% {
+    transform: translateZ(-250px);
+    opacity: 1;
+
+  }
+  50% {
+    transform: translateZ(0)scale(1.1);
+    opacity: 1;
+
+  }
+  75% {
+    transform: translateZ(150px)scale(1.2);
+    opacity: 1;
+
+  }
+  100% {
+    transform: translateZ(0) scale(1);
+    opacity: 1;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+  }
+
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: var(--font-6xl);
+  color: var(--color-quaternary);
+  .containerName {
+    perspective: 500px;
+    display: flex;
+    align-self: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+      .line {
+      display: flex;
+      gap: 0.2rem;
+      }
+      .space {
+      width: 1ch; /* del tamaño de una letra */
+      display: inline-block;
+      }
+      .line span{
+        animation-name: appearFromDepth;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+      }
+      @for $i from 1 through 24{
+        .line span:nth-child(#{$i}){
+          animation-delay: #{($i * 0.1)}s;
+          }
+      }
+    }
+.containerImg{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 1000px;
+
+  border: 1px solid red;
+  .animation{
+    display: flex;
+    align-self: flex-start;
+    margin-top: 10rem;
+    background-color: lightblue;
+    border: 1px solid red;
+    height: 500px;
+    width: 500px;
+  }
+
+  .photo{
+    background-color: lightgreen;
+    border: 1px solid red;
+    height: 500px;
+    width: 500px;
+  }
+}
+
+}
+
+
+
+

@@ -1,0 +1,58 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+  src: url('assets/fonts/Tektur.ttf') format('truetype');
+  font-family: 'Tektur';
+  font-weight: 400 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root{
+   /* ======= FUENTE PRINCIPAL ======= */
+  --font-main: 'Tektur', sans-serif;
+  /* ======= PESOS DE FUENTE ======= */
+
+  --weight-400: 400; /* Regular */
+  --weight-500: 500;
+  --weight-600: 600;
+  --weight-700: 700; /* Bold */
+  --weight-800: 800;
+  --weight-900: 900; /* Black */
+    /* ======= TAMAÑOS DE FUENTE ======= */
+  --font-xs: 0.75rem;     /* 12px */
+  --font-sm: 0.875rem;    /* 14px */
+  --font-base: 1rem;      /* 16px */
+  --font-md: 1.125rem;    /* 18px */
+  --font-lg: 1.25rem;     /* 20px */
+  --font-xl: 1.5rem;      /* 24px */
+  --font-2xl: 2rem;       /* 32px */
+  --font-3xl: 2.5rem;     /* 40px */
+  --font-6xl: 5rem;       /* 48px */
+
+  /* ========= COLORES DE PALETA*/
+
+  --color-primary: #fff9f2;
+  --color-secondary: #d2ffff;
+  --color-tertiary: #78edea;
+  --color-quaternary: #00c3d5ca;
+  --color-quinary: #00a7d196;
+
+}
+body{
+  border-color: #78edea;
+}
+
+
+html {
+  font-family: var(--font-main);
+  scroll-behavior: smooth;
+    section {
+      border: 2px solid red;
+      padding: 3rem;
+      margin: 2rem 0;
+      min-height: 100vh;
+      box-sizing: border-box;
+    }
+
+
+}
