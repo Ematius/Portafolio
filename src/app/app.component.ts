@@ -5,6 +5,7 @@ import { ContactComponent } from "./pages/contact/contact.component";
 import { FooterComponent } from "./core/footer/footer.component";
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { HeaderComponent } from './core/header/header.component';
+import { BarLoadingComponent } from "./core/bar-loading/bar-loading.component";
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,8 @@ import { HeaderComponent } from './core/header/header.component';
     FooterComponent,
     HeaderComponent,
     ProjectsComponent,
-  ],
+    BarLoadingComponent
+],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })

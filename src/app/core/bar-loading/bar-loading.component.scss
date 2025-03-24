@@ -1,0 +1,35 @@
+
+.indicator {
+  background: rgb(0, 0, 0);
+  width: 330px;
+  height: 25px;
+  position: fixed;
+  top: 25px;
+  right: 50px;
+  border-radius: .5rem;
+
+  & .barLoading {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    color: rgb(250, 240, 240);
+    width: 0%;
+    height: 100%;
+    border-radius: .5rem;
+    animation: resize auto linear, changeColor auto linear;
+    animation-timeline: scroll(root block);
+  }
+}
+
+@keyframes resize {
+  0% { width: 5% }
+  100% { width: 100% }
+}
+
+@keyframes changeColor {
+  0% { background-color: rgba(0, 128, 0, .8);}
+  25% {background-color: rgba(153, 205, 50, .8)}
+  50% {background-color: rgb(255, 255, 0, .8)}
+  75% {background-color: rgb(255, 165, 0, .8)}
+  100% {background-color: rgb(255, 0, 0, .8)}
+}

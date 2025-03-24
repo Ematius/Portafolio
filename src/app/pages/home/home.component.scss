@@ -23,7 +23,7 @@
   100% {
     transform: translateZ(0) scale(1);
     opacity: 1;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+    text-shadow: 3px 3px 9px rgba(0, 0, 0, 0.8);
   }
 
 }
@@ -73,14 +73,17 @@ main{
     display: flex;
     align-self: flex-start;
     margin-top: 10rem;
-    background-color: lightblue;
+
     border: 1px solid red;
     height: 500px;
     width: 500px;
   }
 
   .photo{
-    background-color: lightgreen;
+    background-image: url('/src/assets/img/IMG_20240827_182531_561~2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     border: 1px solid red;
     height: 500px;
     width: 500px;
