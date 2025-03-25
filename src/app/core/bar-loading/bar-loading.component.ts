@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-bar-loading',
@@ -6,15 +6,13 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './bar-loading.component.html',
   styleUrl: './bar-loading.component.scss',
 })
-export class BarLoadingComponent implements OnInit {
+export class BarLoadingComponent {
   percent = 0;
 
-  ngOnInit(): void {
-    window.addEventListener('scroll', () => {
-      const scrollable =
-        document.documentElement.scrollHeight - window.innerHeight;
-      this.percent = Math.round((window.scrollY / scrollable) * 100);
-
-    });
+  @HostListener('window:scroll', [])
+  onWindowScroll(): void {
+    const scrollable =
+      document.documentElement.scrollHeight - window.innerHeight;
+    this.percent = Math.round((window.scrollY / scrollable) * 100);
   }
 }
