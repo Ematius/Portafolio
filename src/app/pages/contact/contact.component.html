@@ -1,1 +1,11 @@
-<p>contact works!</p>
+<section class="cv-section" >
+  <button (click)="toggleCV()">
+    {{ showCV ? 'Ocultar CV' : 'Mostrar CV' }}
+  </button>
+
+  @if (showCV) {
+  <div class="cv-container">
+    <img src="img/curriculum.png" alt="Currículum">
+  </div>
+  }
+</section>
