@@ -30,7 +30,7 @@
   /* ========= COLORES DE PALETA =======*/
 
   --color-primary: #4b1a5e;
-  --color-secondary: #9748dcca;
+  --color-secondary: rgba(150, 71, 219, 0.792);
   --color-tertiary: #c050b5;
   --color-quaternary:#872555;
 
@@ -47,8 +47,8 @@ html {
   font-family: var(--font-main);
   scroll-behavior: smooth;
     section {
- 
-      padding-top: 5rem;
+      border-color: red 1px solid;
+      padding-top: 2rem;
       margin: 2rem auto;
       min-height: 100vh;
       box-sizing: border-box;
