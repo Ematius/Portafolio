@@ -3,8 +3,8 @@
     {{ showCV ? 'Ocultar CV' : 'Mostrar CV' }}
   </button>
 
-  @if (showCV) {
-  <div class="cv-container">
+  @if (showCV ) {
+  <div class="cv-container" [class.fadeOut]="keepCV">
     <img src="img/curriculum.png" alt="Currículum">
   </div>
   }

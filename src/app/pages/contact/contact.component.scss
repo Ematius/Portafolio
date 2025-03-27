@@ -5,7 +5,6 @@
   margin: 2rem auto;
   padding: 1rem;
 
-
   button {
     background-color: var(--color-tertiary);
     color: white;
@@ -15,7 +14,7 @@
     font-weight: var(--weight-900);
     cursor: pointer;
     transition: background 0.3s;
-    &:hover {
+    &:active {
       background-color: var(--color-quaternary);
     }
   }
@@ -24,15 +23,15 @@
     margin-top: 1.5rem;
     width: 100%;
     max-width: 600px;
-    animation:fadeIn 1s ease-out forwards;
+    animation: fadeIn 1s ease-in forwards;
     z-index: -2;
     img {
       width: 100%;
+
       height: auto;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
       z-index: -2;
-
     }
   }
 }
@@ -46,4 +45,19 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(500px);
+  }
+}
+
+.fadeOut{
+  animation: fadeOut 1s ease-in forwards;
 }

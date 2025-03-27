@@ -7,12 +7,19 @@ import { Component } from '@angular/core';
   imports: [],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
-
 })
 export class ContactComponent {
-  showCV = false;
+  showCV = false; 
+  keepCV = false;
 
   toggleCV() {
-    this.showCV = !this.showCV;
+    if (!this.showCV) {
+
+      this.keepCV = false;
+      this.showCV = true;
+    } else {
+
+      this.keepCV = true;
+    }
   }
 }
