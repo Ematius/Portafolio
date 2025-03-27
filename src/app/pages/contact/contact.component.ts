@@ -9,17 +9,14 @@ import { Component } from '@angular/core';
   styleUrl: './contact.component.scss',
 })
 export class ContactComponent {
-  showCV = false; 
+  showCV = false;
   keepCV = false;
 
+
   toggleCV() {
-    if (!this.showCV) {
-
-      this.keepCV = false;
-      this.showCV = true;
-    } else {
-
-      this.keepCV = true;
-    }
-  }
+    if(this.showCV) {
+      this.showCV = !this.showCV;
+  } else {
+    this.showCV = !this.showCV;
+  }}
 }
