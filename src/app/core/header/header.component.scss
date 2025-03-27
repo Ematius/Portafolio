@@ -7,12 +7,14 @@ nav{
       flex-direction: row;
       justify-content: flex-end;
       color: black;
-      font-size: var(--font-s);
+      font-size: var(--font-xs);
       font-weight: var(--weight-400);
       margin: 1rem;
         li{
           margin: .5rem;
           padding-right: .5rem;
+          backdrop-filter: blur(10px);
+          border-radius: 1rem;
           a{
             span{
               margin: .5rem;

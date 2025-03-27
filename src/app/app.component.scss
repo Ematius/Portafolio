@@ -1,0 +1,17 @@
+section {
+  animation: disappear linear forwards;
+  animation-timeline: view(block auto 80%);
+  animation-duration: 1s;
+}
+
+@keyframes disappear {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  to {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+}

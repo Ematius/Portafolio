@@ -20,7 +20,7 @@
   100% {
     transform: translateZ(0) scale(1);
     opacity: 1;
-    text-shadow: 3px 3px 9px rgba(0, 0, 0, 0.8);
+    text-shadow: 3px 3px 3px var(--color-tertiary);
   }
 }
 
@@ -29,8 +29,8 @@ main {
   flex-direction: column;
   justify-content: space-between;
   font-size: var(--font-base);
-  font-weight: var(--weight-400);
-  color: var(--color-quaternary);
+  font-weight: var(--weight-500);
+  color: var(--color-primary);
   .containerName {
     perspective: 1000px;
     display: flex;
