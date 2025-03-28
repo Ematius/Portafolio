@@ -21,21 +21,27 @@ section {
       flex-wrap: wrap;
       gap: 1rem;
       justify-content: center;
+      perspective: 500px;
       li {
         width: 25%;
         height: 100px;
         border-radius: 50%;
-        background-color: var(--color-secondary);
+        background: radial-gradient(
+          circle at 30% 30%,
+          var(--color-primary),
+          var(--color-secondary)
+        );
         color: white;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-weight: var(--weight-500);
+        font-size: var(--font-s);
+        font-weight: var(--weight-400);
         box-shadow: 2px 5px 5px var(--color-tertiary);
-        li:hover {
-          transform: scale(2);
-          transition: transform 0.3s ease;
-        }
+      }
+      li:hover{
+        transform: rotateZ(10deg);
+        scale: (1.1);
       }
     }
   }
