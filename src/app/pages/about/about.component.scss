@@ -5,7 +5,7 @@ section {
     align-items: center;
     flex-direction: column;
     h2 {
-      font-size: var(--font-xl);
+      font-size: var(--font-l);
       margin-bottom: 1rem;
       color: var(--color-primary);
       text-shadow: 3px 3px 1px var(--color-tertiary);
@@ -42,6 +42,38 @@ section {
       li:hover{
         transform: rotateZ(10deg);
         scale: (1.1);
+      }
+    }
+  }
+  @media(min-width:1200px){
+    div{
+      h2{
+        font-size: var(--font-xl);
+        margin-bottom: 2rem;
+      }
+      p{
+        font-size: var(--font-base);
+        margin: 5rem;
+      }
+      ul{
+        li{
+        width: 25%;
+        height: 200px;
+        font-size: var(--font-base);
+        font-weight: var(--weight-400);
+        }
+      }
+    }
+  }
+  @media(min-width: 1500px){
+    div{
+      ul{
+        li{
+        width: 30%;
+        height: 400px;
+        font-size: var(--font-l);
+        font-weight: var(--weight-600);
+        }
       }
     }
   }

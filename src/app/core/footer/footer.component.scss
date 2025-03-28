@@ -19,4 +19,28 @@ section {
       }
     }
   }
+  @media(min-width: 700px) {
+    p {
+      font-size: var(--font-s);
+    }
+    a {
+      img {
+        width: 3rem;
+      }
+    }
+  }
+  @media(min-width: 1200px) {
+
+    p {
+      font-size: var(--font-base);
+    }
+    a {
+      display: flex;
+      justify-content: center ;
+      img {
+        width: 5rem;
+      }
+    }
+  }
+
 }
