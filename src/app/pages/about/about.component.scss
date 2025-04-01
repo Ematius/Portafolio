@@ -35,8 +35,8 @@ section {
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: var(--font-s);
-        font-weight: var(--weight-400);
+        font-size: var(--font-xs);
+        font-weight: var(--weight-600);
         box-shadow: 2px 5px 5px var(--color-tertiary);
       }
       li:hover{
@@ -69,7 +69,7 @@ section {
     div{
       ul{
         li{
-      
+
         height: 200px;
         font-size: var(--font-base);
         font-weight: var(--weight-600);
