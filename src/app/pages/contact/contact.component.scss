@@ -6,7 +6,12 @@
   padding: 1rem;
 
   button {
-    background-color: var(--color-tertiary);
+ background-image: radial-gradient(
+  circle at bottom right,
+  var(--color-primary),
+  var(--color-tertiary)
+);
+
     color: white;
     border: none;
     padding: 10px 20px;
