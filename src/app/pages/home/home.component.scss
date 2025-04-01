@@ -98,7 +98,7 @@ main {
     margin-top: 15rem;
     display: flex;
     flex-direction: row;
-    font-size: var(--font-xl);
+    font-size: var(--font-l);
     font-weight: var(--weight-500);
     .containerImg {
       min-width: 500px;
@@ -116,7 +116,7 @@ main {
         max-width: 500px;
         max-height: 500px;
         background-color: var(--color-primary);
-        left: 1400px;
+        left: 1250px;
         top: 350px;
         z-index: -1;
       }
@@ -126,12 +126,11 @@ main {
         max-width: 500px;
         max-height: 500px;
         background-color: var(--color-secondary);
-        left: 1600px;
+        left: 1300px;
         top: 400px;
         z-index: -3;
       }
     }
   }
-  @media (max-width: 1600px) {
-  }
+
 }
