@@ -23,7 +23,7 @@ section {
       justify-content: center;
       perspective: 500px;
       li {
-        width: 25%;
+        width: 20%;
         height: 100px;
         border-radius: 50%;
         background: radial-gradient(
@@ -57,7 +57,7 @@ section {
       }
       ul{
         li{
-        width: 25%;
+
         height: 200px;
         font-size: var(--font-base);
         font-weight: var(--weight-400);
@@ -69,9 +69,9 @@ section {
     div{
       ul{
         li{
-        width: 30%;
-        height: 400px;
-        font-size: var(--font-l);
+      
+        height: 200px;
+        font-size: var(--font-base);
         font-weight: var(--weight-600);
         }
       }
