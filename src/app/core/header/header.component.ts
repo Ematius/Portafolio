@@ -10,8 +10,12 @@ import { ViewportScroller } from '@angular/common';
 })
 export class HeaderComponent implements OnInit {
   activeSection = 'home';
+  isMobile = false;
 
   constructor(private viewportScroller: ViewportScroller) {}
+  toggleMenu() {
+    this.isMobile = !this.isMobile;
+  }
 
   scrollToSection(sectionId: string) {
     this.viewportScroller.scrollToAnchor(sectionId);
