@@ -21,10 +21,29 @@ section {
     }
   }
   div {
-    img {
-      width: 5rem;
-      height: auto;
-      border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: greet 1s alternate both;
+
+  }
+  @keyframes greet {
+    0% {
+      background-image: url("animation-despedir/1.png");
+    }
+    25% {
+      background-image: url("animation-despedir/2.png");
+    }
+    50% {
+      background-image: url("animation-despedir/3.png");
+    }
+    75% {
+      background-image: url("animation-despedir/4.png");
+    }
+    100% {
+      background-image: url("animation-despedir/5.png");
     }
   }
   @media (min-width: 700px) {
