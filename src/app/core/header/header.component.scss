@@ -1,48 +1,52 @@
-menu {
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: var(--font-base);
-  font-weight: var(--weight-500);
-  color: var(--color-primary);
-  box-shadow: 0 3px 0px rgba(0, 0, 0, 0.2);
+div {
+  position: fixed;
+  width: 100%;
+  z-index: 300;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+  padding-top: .5rem;
+  padding-left: .5rem;
 
-  details {
-    position: relative;
-    box-shadow: 0 3px 0px rgba(0, 0, 0, 0);
-
-    summary {
-      list-style: none;
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: .5rem;
+    p {
+      font-size: var(--font-base);
+      color: var(--color-primary);
+    }
+    button {
+      border: none;
+      background-color: transparent;
       cursor: pointer;
-      display: flex;
-      align-items: center;
-
       img {
-        width: 30px;
-        height: 30px;
+        width: 1.7rem;
+        height: 1.7rem;
       }
     }
-
+  }
+  nav {
+    padding-top: 1rem;
     ul {
-      list-style: none;
-      position: absolute;
       display: flex;
       flex-direction: column;
-      right: 0;
-      transform: translateX(-50%);
-
-      z-index: 1;
-      
+      justify-content: center;
+      align-items: center;
+      gap:.5rem;
+      padding-bottom: 1rem;
       li {
-        width: 100%;
-        background-color: inherit;
+        list-style: none;
         a {
-          backdrop-filter: blur(5px);
-          background-color: rgba(255, 255, 255, 0.8);
-          width: 100%;
-          padding: 0.5rem 1rem;
+          text-decoration: none;
+          color: var(--color-primary);
+          font-size: var(--font-base);
+          &:hover{
+            color: var(--color-secondary);
+            transition: all 0.3s ease-in-out;
+            transform: scale(1.1);
+          }
         }
       }
     }

@@ -1,42 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { ViewportScroller } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 
 @Component({
   selector: 'app-header',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
-  // activeSection = 'home';
-  // isMobile = false;
 
-  // constructor(private viewportScroller: ViewportScroller) {}
-  // toggleMenu() {
-  //   this.isMobile = !this.isMobile;
-  // }
+  isOpenMenu = false;
 
-  // scrollToSection(sectionId: string) {
-  //   this.viewportScroller.scrollToAnchor(sectionId);
-  // }
-  // ngOnInit() {
-  //   const sections = document.querySelectorAll('section[id]');
-  //   const observer = new IntersectionObserver(
-  //     (entries) => {
-  //       entries.forEach((entry) => {
-  //         if (entry.isIntersecting) {
-  //           this.activeSection = entry.target.id;
-  //         }
-  //       });
-  //     },
-  //     {
-  //       rootMargin: '-50% 0px -50% 0px',
-  //     }
-  //   );
-
-  //   sections.forEach((section) => observer.observe(section));
-  // }
-
-
+  toggleMenu() {
+    this.isOpenMenu = !this.isOpenMenu;
+  }
 }

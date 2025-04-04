@@ -1,19 +1,17 @@
-
-  <menu>
-    Emad Kadyear
-    <details>
-      <summary> <img src="icons/menu.svg" atl="menu" /></summary>
-         <div>
-          <ul>
-          <li><a>Inicio </a></li>
-          <li><a>Sobre mí</a></li>
-          <li><a>Proyectos</a></li>
-          <li><a>Contacto</a></li>
-        </ul>
-         </div>
-
-    </details>
-  </menu>
-
-
+<div>
+  <header>
+    <p>Emad Kadyear</p>
+    <button (click)="toggleMenu()" ><img src="icons/menu.svg" atl="buttonMenu" /></button>
+  </header>
+  @if(isOpenMenu){
+    <nav>
+      <ul>
+        <li><a (click)="toggleMenu()" href="#home">Inicio </a></li>
+        <li><a (click)="toggleMenu()" href="#about">Sobre mí</a></li>
+        <li><a (click)="toggleMenu()" href="#projects">Proyectos</a></li>
+        <li><a (click)="toggleMenu()" href="#contact">Contacto</a></li>
+      </ul>
+    </nav>
+  }
+</div>
 
