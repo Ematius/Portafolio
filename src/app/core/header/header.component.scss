@@ -9,12 +9,9 @@ menu {
   color: var(--color-primary);
   box-shadow: 0 3px 0px rgba(0, 0, 0, 0.2);
 
-
   details {
     position: relative;
     box-shadow: 0 3px 0px rgba(0, 0, 0, 0);
-
-
 
     summary {
       list-style: none;
@@ -35,11 +32,19 @@ menu {
       flex-direction: column;
       right: 0;
       transform: translateX(-50%);
-      background-color: rgba(255, 255, 255, 0.877);
-      z-index: 1;
-      backdrop-filter: blur(5px);
-      
 
+      z-index: 1;
+      
+      li {
+        width: 100%;
+        background-color: inherit;
+        a {
+          backdrop-filter: blur(5px);
+          background-color: rgba(255, 255, 255, 0.8);
+          width: 100%;
+          padding: 0.5rem 1rem;
+        }
+      }
     }
   }
 }
