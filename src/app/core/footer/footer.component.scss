@@ -1,10 +1,10 @@
-section {
+footer {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  padding: 0;
-  margin: 0;
+
+  margin: 0.5rem;
   min-height: 20%;
   p {
     font-size: var(--font-xs);
@@ -13,40 +13,16 @@ section {
   a {
     width: 2rem;
     height: auto;
-    img {
-      transition: filter 0.3s;
-      &:hover {
-        filter: brightness(1.2);
-      }
-    }
   }
   div {
-    width: 5rem;
-    height: 5rem;
-    border-radius: 50%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    animation: greet 1s infinite;
-    transition: ease-in-out 0.3s;
+    perspective: 1000px;
+    img {
+      width: 4.2rem;
+      height: auto;
+      animation: goodbye 1s ease-in-out forwards;
+    }
+  }
 
-  }
-  @keyframes greet {
-    0% {
-      background-image: url("animation-despedir/1.png");
-    }
-    25% {
-      background-image: url("animation-despedir/2.png");
-    }
-    50% {
-      background-image: url("animation-despedir/3.png");
-    }
-    75% {
-      background-image: url("animation-despedir/4.png");
-    }
-    100% {
-      background-image: url("animation-despedir/5.png");
-    }
-  }
   @media (min-width: 700px) {
     p {
       font-size: var(--font-s);
@@ -68,5 +44,17 @@ section {
         width: 5rem;
       }
     }
+  }
+}
+
+@keyframes goodbye {
+  0% {
+    transform: translateY(500px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    scale: 1.5;
   }
 }

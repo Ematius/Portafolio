@@ -1,12 +1,9 @@
-<section class="cv-section" >
-  <button (click)="toggleCV()">
-    {{ showCV ? 'Ocultar CV' : 'Mostrar CV' }}
-  </button>
+<article>
 
-  @if (showCV) {
-  <div class="cv-container">
-    <a href="img/curriculum.png" download="img/curriculum.png">Descargar</a>
-    <img src="img/curriculum.png" alt="Currículum">
+  <h2>curriculum</h2>
+
+  <div >
+    <a href="img/curriculum.png" download="img/curriculum.png"><img src="icons/descarga.svg" alt=""/>Descargar</a>
   </div>
-  }
-</section>
+
+</article>
