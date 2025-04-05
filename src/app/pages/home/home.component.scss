@@ -61,61 +61,7 @@ main {
     font-size: var(--font-s);
   }
 
-  @media (min-width: 700px) {
-    font-size: var(--font-l);
-    font-weight: var(--weight-500);
-    .containerImg img {
-      max-width: 500px;
-    }
-  }
-  @media (min-width: 1200px) {
-    .containerName {
-      margin-top: 6rem;
-    }
-  }
-  @media (min-width: 1500px) {
-    .containerName {
-      margin-left: 10rem;
-
-    }
-    margin-top: 15rem;
-    display: flex;
-    flex-direction: row;
-    font-size: var(--font-l);
-    font-weight: var(--weight-500);
-    .containerImg {
-      min-width: 500px;
-      .circule1,
-      .circule2 {
-        position: absolute;
-        width: 300px;
-        height: 300px;
-        border-radius: 50%;
-        opacity: 0.6;
-      }
-      .circule1 {
-        width: 100%;
-        height: 100%;
-        max-width: 500px;
-        max-height: 500px;
-        background-color: var(--color-primary);
-        left: 1250px;
-        top: 350px;
-        z-index: -1;
-      }
-      .circule2 {
-        width: 100%;
-        height: 100%;
-        max-width: 500px;
-        max-height: 500px;
-        background-color: var(--color-secondary);
-        left: 1300px;
-        top: 400px;
-        z-index: -3;
-      }
-    }
-  }
-
+  
 }
 @keyframes appearFromDepth {
   0% {
