@@ -16,26 +16,5 @@ section {
 
 
 
-  @media(min-width: 700px) {
-    h2 {
-      font-size: var(--font-l);
-    }
-    img {
-      width: 80%;
-
-    }
-  }
-  @media (min-width: 1200px) {
-    h2 {
-      font-size: var(--font-l);
-    }
-    img {
-      width: 60%;
-    }
-  }
-  @media(min-width:1500px){
-    img{
-      width: 40%;
-    }
-  }
+  
 

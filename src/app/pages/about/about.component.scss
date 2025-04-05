@@ -49,36 +49,5 @@ article {
     }
 
   }
-  @media(min-width:1200px){
-    div{
-      h2{
-        font-size: var(--font-l);
-        margin-bottom: 2rem;
-      }
-      p{
-        font-size: var(--font-base);
-        margin: 5rem;
-      }
-      ul{
-        li{
-
-        height: 200px;
-        font-size: var(--font-base);
-        font-weight: var(--weight-400);
-        }
-      }
-    }
-  }
-  @media(min-width: 1500px){
-    div{
-      ul{
-        li{
-
-        height: 200px;
-        font-size: var(--font-base);
-        font-weight: var(--weight-600);
-        }
-      }
-    }
-  }
+  
 }

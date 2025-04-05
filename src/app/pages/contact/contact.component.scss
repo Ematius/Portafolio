@@ -36,19 +36,4 @@ article {
   }
 }
 
-@media (min-width: 1200px) {
-  button {
-    font-size: var(--font-base);
-    padding: 1px 6px;
-  }
-  .cv-container {
-    width: 80%;
-    max-width: 1000px;
-  }
-}
-@media (min-width: 1500px) {
-  .cv-container {
-    width: 100%;
-    max-width: 1200px;
-  }
-}
+
