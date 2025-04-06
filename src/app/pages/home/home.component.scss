@@ -1,4 +1,3 @@
-
 main {
   padding-top: 5rem;
   display: flex;
@@ -7,27 +6,42 @@ main {
   font-size: var(--font-base);
   font-weight: var(--weight-400);
   color: var(--color-primary);
+  .containerWelcome,
   .containerName {
     perspective: 1000px;
     display: flex;
     align-self: center;
     flex-direction: column;
     align-items: center;
-    .line {
+    .line,
+    .lineFullStack,
+    .lineDeveloper {
       display: flex;
       gap: 0.2rem;
       font-weight: var(--weight-700);
     }
     .space {
-      width:.5rem;
+      width: 0.5rem;
     }
-    .line span {
+    .line span,
+    .lineFullStack span,
+    .lineDeveloper span {
       animation-name: appearFromDepth;
       animation-duration: 3s;
       animation-fill-mode: forwards;
     }
     @for $i from 1 through 24 {
       .line span:nth-child(#{$i}) {
+        animation-delay: #{($i * 0.1)}s;
+      }
+    }
+    @for $i from 1 through 24 {
+      .lineFullStack span:nth-child(#{$i}) {
+        animation-delay: #{($i * 0.1)}s;
+      }
+    }
+    @for $i from 1 through 24 {
+      .lineDeveloper span:nth-child(#{$i}) {
         animation-delay: #{($i * 0.1)}s;
       }
     }
@@ -52,17 +66,91 @@ main {
       box-shadow: 4px 6px 12px -2px rgba(0, 0, 0, 0.8);
     }
   }
-  .sizeStack{
+  .sizeStack {
     font-size: var(--font-l);
   }
-  .divText{
-    margin: .5rem;
-    font-family: Arial, Helvetica, sans-serif;
+  .divText {
+    margin: 1rem;
+    margin-left: 1rem;
     font-size: var(--font-s);
+    text-align: justify;
   }
+  .containerWelcomeNone {
+    display: none;
+  }
+  @media (min-width: 1400px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 
-  
+    .containerWelcome,
+    .divText,
+    .containerName {
+      display: none;
+    }
+
+    .containerWelcomeNone {
+      display: block;
+
+      p {
+        font-size: var(--font-s);
+        color: var(--color-primary);
+        font-weight: var(--weight-400);
+        margin-top: 1rem;
+      }
+
+      .lineNameNone {
+        font-weight: var(--weight-700);
+        font-size: var(--font-base);
+        gap:0.2rem;
+        .spaceNameNone {
+          width: 0.5rem;
+          display: inline-block;
+        }
+      }
+
+      .lineFullStackNone {
+        display: flex;
+        gap: 0.2rem;
+        font-weight: var(--weight-700);
+        .spaceFullStackNone {
+          width: 0.5rem;
+          display: inline-block;
+        }
+      }
+      .lineNameNone span:not(.spaceNameNone),
+      .lineFullStackNone span:not(.spaceFullStackNone),
+      .lineDeveloperNone span:not(.spaceDeveloperNone) {
+        animation-name: appearFromDepth;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+      }
+
+      @for $i from 1 through 24 {
+        .lineNameNone span:not(.spaceNameNone):nth-child(#{$i}) {
+          animation-delay: #{($i * 0.1)}s;
+        }
+      }
+      @for $i from 1 through 24 {
+        .lineFullStackNone span:not(.spaceNameNone):nth-child(#{$i}) {
+          animation-delay: #{($i * 0.1)}s;
+        }
+      }
+
+      .divTextNone {
+        text-align: start;
+      }
+    }
+
+    .containerImg {
+      img {
+        margin: 3rem;
+      }
+    }
+  }
 }
+
 @keyframes appearFromDepth {
   0% {
     transform: translateY(-500px);
@@ -88,4 +176,3 @@ main {
     text-shadow: 2.5px 1px var(--color-tertiary);
   }
 }
-

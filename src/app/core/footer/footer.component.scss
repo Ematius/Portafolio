@@ -3,7 +3,6 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-
   margin: 0.5rem;
   min-height: 20%;
   p {
@@ -13,30 +12,31 @@ footer {
   a {
     width: 2rem;
     height: auto;
-   
   }
   div {
-    perspective: 1000px;
-    img {
-      width: 2.5rem;
-      height: auto;
-      animation: goodbye 1s ease-in-out forwards;
-    }
-  }
+    
+    width: 4rem;
+    height: 4rem;
+    overflow: hidden;
 
-  @media (min-width: 700px) {
-    p {
-      font-size: var(--font-s);
-    }
-    a {
-      img {
-        width: 3rem;
+    img {
+      width: 3rem;
+      height: auto;
+      will-change: transform, opacity;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease, transform 1s ease;
+
+      &.visible {
+        opacity: 1;
+        transform: translateY(0);
       }
     }
   }
-  @media (min-width: 1200px) {
+
+  @media (min-width: 1400px) {
     p {
-      font-size: var(--font-m);
+      font-size: var(--font-s);
     }
     a {
       display: flex;
@@ -45,17 +45,5 @@ footer {
         width: 5rem;
       }
     }
-  }
-}
-
-@keyframes goodbye {
-  0% {
-    transform: translateY(500px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-    scale: 1.5;
   }
 }

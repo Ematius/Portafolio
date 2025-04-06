@@ -30,7 +30,7 @@ div {
       }
     }
   }
-  nav {
+  .nav-open {
     padding-top: 1rem;
     ul {
       display: flex;
@@ -57,4 +57,47 @@ div {
   .nav-hidden{
     display: none;
   }
+  @media (min-width:1400px){
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    header{
+      padding-left: 10rem;
+      button{
+      display: none;
+    }
+
+    }
+
+    .nav-open {
+      display: none;
+    }
+    .nav-hidden{
+      display:block;
+      ul{
+        display: flex;
+        flex-direction: row;
+        gap: 3rem;
+        padding-right: 10rem;
+
+        li {
+          list-style: none;
+          a {
+            text-decoration: none;
+            color: var(--color-primary);
+            font-size: var(--font-m);
+            &:hover{
+              color: var(--color-secondary);
+              transition: all 0.3s ease-in-out;
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+
+    }
+
+
+  }
+
 }

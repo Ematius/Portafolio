@@ -10,11 +10,21 @@ section {
     color: white;
     font-size: var(--font-l);
     text-shadow: 2.5px 1px var(--color-tertiary);
-
   }
+  img{
+      width: 50vw;
+      height: auto;
+    }
+  @media(min-width: 1400px){
+    img{
+      width: 50vw;
+      height: auto;
+    }
+  }
+
 }
 
 
 
-  
+
 
