@@ -99,29 +99,20 @@ main {
         font-weight: var(--weight-400);
         margin-top: 1rem;
       }
-
+      
+      .lineFullStackNone,
       .lineNameNone {
+        display: flex;
+        gap: 0.2rem;
         font-weight: var(--weight-700);
-        font-size: var(--font-base);
-        gap:0.2rem;
+        .spaceFullStackNone,
         .spaceNameNone {
           width: 0.5rem;
           display: inline-block;
         }
       }
-
-      .lineFullStackNone {
-        display: flex;
-        gap: 0.2rem;
-        font-weight: var(--weight-700);
-        .spaceFullStackNone {
-          width: 0.5rem;
-          display: inline-block;
-        }
-      }
       .lineNameNone span:not(.spaceNameNone),
-      .lineFullStackNone span:not(.spaceFullStackNone),
-      .lineDeveloperNone span:not(.spaceDeveloperNone) {
+      .lineFullStackNone span:not(.spaceFullStackNone) {
         animation-name: appearFromDepth;
         animation-duration: 3s;
         animation-fill-mode: forwards;
