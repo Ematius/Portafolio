@@ -11,29 +11,32 @@ article {
     color: var(--color-primary);
     text-shadow: 3px 3px 1px var(--color-tertiary);
   }
-  div {
 
-    a{
+  div {
+    box-shadow: 3px 3px 1px var(--color-secondary);
+    &:hover {
+      scale: (1.1);
+      background-color: var(--color-tertiary);
+      transition: all 0.2s ease-in-out;
+    }
+
+    a {
       display: flex;
       text-decoration: none;
       border: 2px solid var(--color-primary);
-      padding: .5rem 2rem;
+      padding: 0.5rem 2rem;
       color: var(--color-primary);
-      &:active{
+
+      &:active {
         background-color: var(--color-primary);
         color: var(--color-tertiary);
       }
 
-
-      img{
-
+      img {
         width: 1.3rem;
         height: 1.3rem;
         margin-right: 2rem;
       }
-
     }
   }
 }
-
-

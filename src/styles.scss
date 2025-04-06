@@ -1,15 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 @font-face {
-  src: url('assets/fonts/Tektur.ttf') format('truetype');
-  font-family: 'Tektur';
+  src: url("assets/fonts/Tektur.ttf") format("truetype");
+  font-family: "Tektur";
   font-weight: 400 900;
   font-style: normal;
   font-display: swap;
 }
 
-:root{
-   /* ======= FUENTE PRINCIPAL ======= */
-  --font-main: 'Tektur', sans-serif;
+:root {
+  /* ======= FUENTE PRINCIPAL ======= */
+  --font-main: "Tektur", sans-serif;
   /* ======= PESOS DE FUENTE ======= */
 
   --weight-400: 400; /* Regular */
@@ -18,46 +18,34 @@
   --weight-700: 700; /* Bold */
   --weight-800: 800;
   --weight-900: 900; /* Black */
-    /* ======= TAMAÑOS DE FUENTE ======= */
+  /* ======= TAMAÑOS DE FUENTE ======= */
   --font-xs: clamp(0.75rem, 0.9rem + 0.1rem, 1.1rem);
   --font-s: clamp(1.1rem, 1vw + 0.2rem, 1.5rem);
   --font-m: clamp(1rem, 2rem + 0.2rem, 2rem);
-  --font-base: clamp(1.5rem, 2rem + 0.5rem, 3rem);
+  --font-base: clamp(1.5rem, 2.5rem + 0.5rem, 3rem);
   --font-l: clamp(3rem, 4rem + 0.5rem, 5rem);
-  --font-xl: clamp(5rem, 6rem + 0.5rem, 7rem);
-
-
-
+  --font-xl: clamp(4rem, 6rem + 0.5rem, 6rem);
 
   /* ========= COLORES DE PALETA =======*/
 
   --color-primary: #4b1a5e;
   --color-secondary: #7b1978;
   --color-tertiary: #c050b5;
-
-
-
 }
 
-
-body{
+body {
   font-family: var(--font-main);
   scroll-behavior: smooth;
-
-
-
-
 }
-
-
-
 
 /* ========================================================================== */
 /* ========================= RESET CSS ========================= */
 
 /* Reset Josh W. Comeau */
 /* 1. Use a more-intuitive box-sizing model */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -81,18 +69,31 @@ body {
 }
 
 /* 6. Improve media defaults */
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 
 /* 7. Inherit fonts for form controls */
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
 /* 8. Avoid text overflows */
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 
@@ -100,13 +101,19 @@ p, h1, h2, h3, h4, h5, h6 {
 p {
   text-wrap: pretty;
 }
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-wrap: balance;
 }
 
 /*
   10. Create a root stacking context
 */
-#root, #__next {
+#root,
+#__next {
   isolation: isolate;
 }

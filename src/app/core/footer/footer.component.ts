@@ -11,14 +11,12 @@ export class FooterComponent implements AfterViewInit {
 @ViewChild('img') img!:ElementRef;
 isVisible = false;
 
-
 ngAfterViewInit(): void {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             this.isVisible = true;
-
           } else {
             this.isVisible = false;
           }
@@ -26,7 +24,6 @@ ngAfterViewInit(): void {
       },
       { threshold: 0.2 }
     );
-
     observer.observe(this.img.nativeElement);
   }
 }
