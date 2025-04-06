@@ -13,8 +13,9 @@ div {
     flex-direction: row;
     justify-content: space-between;
     padding-bottom: .5rem;
+    margin-left: 1rem;
     p {
-      font-size: var(--font-base);
+      font-size: var(--font-m);
       color: var(--color-primary);
     }
     button {
@@ -64,6 +65,10 @@ div {
     align-items: center;
     header{
       padding-left: 10rem;
+      p {
+      font-size: var(--font-base);
+
+    }
       button{
       display: none;
       }
