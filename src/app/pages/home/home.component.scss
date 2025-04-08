@@ -65,8 +65,7 @@ main {
       aspect-ratio: 1/1.38;
       margin-bottom: 1rem;
       box-shadow: 3px 3px 5px var(--color-primary);
-      filter: drop-shadow(3px 3px 5px  var(--color-tertiary));
-
+      filter: drop-shadow(3px 3px 5px var(--color-tertiary));
     }
   }
 
@@ -74,10 +73,20 @@ main {
     margin: 1rem;
     margin-left: 1rem;
     font-size: var(--font-s);
-
   }
   .containerWelcomeNone {
     display: none;
+  }
+
+  @for $i from 1 through 24 {
+    .lineNameNone span:nth-child(#{$i}) {
+      animation-delay: #{($i * 0.1)}s;
+    }
+  }
+  @for $i from 1 through 24 {
+    .lineFullStackNone span:nth-child(#{$i}) {
+      animation-delay: #{($i * 0.1)}s;
+    }
   }
   @media (min-width: 1400px) {
     display: flex;
@@ -113,21 +122,10 @@ main {
         }
       }
       .lineNameNone span,
-      .lineFullStackNone span{
+      .lineFullStackNone span {
         animation-name: appearFromDepth;
         animation-duration: 3s;
         animation-fill-mode: forwards;
-      }
-
-      @for $i from 1 through 24 {
-        .lineNameNone span:not(.spaceNameNone):nth-child(#{$i}) {
-          animation-delay: #{($i * 0.1)}s;
-        }
-      }
-      @for $i from 1 through 24 {
-        .lineFullStackNone span:not(.spaceNameNone):nth-child(#{$i}) {
-          animation-delay: #{($i * 0.1)}s;
-        }
       }
 
       .divTextNone {
