@@ -112,8 +112,8 @@ main {
           display: inline-block;
         }
       }
-      .lineNameNone span:not(.spaceNameNone),
-      .lineFullStackNone span:not(.spaceFullStackNone) {
+      .lineNameNone span,
+      .lineFullStackNone span{
         animation-name: appearFromDepth;
         animation-duration: 3s;
         animation-fill-mode: forwards;
