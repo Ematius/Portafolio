@@ -1,9 +1,11 @@
-<app-header> </app-header>
+<app-header></app-header>
+
 <main>
-  <section id="home"><app-home /></section>
-  <section id="projects"><app-projects /></section>
-  <section id="about"><app-about /></section>
-  <section> <app-knowledge></app-knowledge> </section>
-  <section id="contact"><app-contact /></section>
+  <section id="home" #sectionRef><app-home></app-home></section>
+  <section id="projects" #sectionRef><app-projects></app-projects></section>
+  <section id="about" ><app-about></app-about></section>
+  <section id="knowledge" #sectionRef><app-knowledge></app-knowledge></section>
+  <section id="contact" #sectionRef><app-contact></app-contact></section>
 </main>
+
 <app-footer></app-footer>
