@@ -1,17 +1,5 @@
 section {
-  animation: disappear linear forwards;
-  animation-timeline: view(block auto 120%);
-  animation-duration: 1s;
-}
-
-@keyframes disappear {
-  from {
-    opacity: 1;
-    transform: scale(1);
-  }
-
-  to {
-    opacity: 0;
-    transform: scale(0);
-  }
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  opacity: 1;
 }

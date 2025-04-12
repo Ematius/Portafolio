@@ -25,65 +25,9 @@ section {
       flex-direction: column;
       justify-content: flex-start;
       width: 100px;
-      font-size: var(--font-base);
 
-      // 🧠 Scroll-driven animation
-      view-timeline-name: --titleScroll;
-      view-timeline-axis: block;
-
-      span {
-        opacity: 0;
-        transform: translateX(-100px);
-        display: inline-block;
-        transition: transform 0.5s ease-out, opacity 0.5s ease-out;
-        &:nth-child(1) {
-          opacity: 1;
-          transform: translateX(0);
-          transition-delay: 0.1s;
-        }
-        &:nth-child(2) {
-          opacity: 1;
-          transform: translateX(0);
-          transition-delay: 0.2s;
-        }
-        &:nth-child(3) {
-          opacity: 1;
-          transform: translateX(0);
-          transition-delay: 0.3s;
-        }
-        &:nth-child(4) {
-          opacity: 1;
-          transform: translateX(0);
-          transition-delay: 0.4s;
-        }
-        &:nth-child(5) {
-          opacity: 1;
-          transform: translateX(0);
-          transition-delay: 0.5s;
-        }
-        &:nth-child(6) {
-          opacity: 1;
-          transform: translateX(0);
-          transition-delay: 0.6s;
-        }
-        &:nth-child(7) {
-          opacity: 1;
-          transform: translateX(0);
-          transition-delay: 0.7s;
-        }
-        &:nth-child(8) {
-          opacity: 1;
-          transform: translateX(0);
-          transition-delay: 0.8s;
-        }
-        &:nth-child(9) {
-          opacity: 1;
-          transform: translateX(0);
-          transition-delay: 0.9s;
-        }
-      }
     }
-    
+
 
     div {
       display: flex;
@@ -95,8 +39,6 @@ section {
         flex-grow: 1;
         object-fit: cover;
         opacity: 0.8;
-        transition: 0.5s ease; // corregido "easy" → "ease"
-
         &:hover {
           cursor: crosshair;
           width: 300px;

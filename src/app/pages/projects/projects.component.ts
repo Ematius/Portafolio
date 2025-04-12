@@ -1,35 +1,46 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
+gsap.registerPlugin(ScrollTrigger);
 
 @Component({
   selector: 'app-projects',
-  imports: [ CommonModule],
+  imports: [CommonModule],
   templateUrl: './projects.component.html',
-  styleUrl: './projects.component.scss'
+  styleUrl: './projects.component.scss',
 })
-export class ProjectsComponent implements AfterViewInit{
-
-  visible = false;
-
-  @ViewChild('titleRef') titleRef!: ElementRef;
+export class ProjectsComponent implements AfterViewInit {
+  @ViewChild('titleRef', { static: false }) titleRef!: ElementRef;
+  @ViewChild('divRef', { static: false }) divRef!: ElementRef;
 
   ngAfterViewInit(): void {
-   const observer = new IntersectionObserver(
-     ([entry]) => {
-        if (entry.isIntersecting) {
-          this.visible = true;
-          observer.disconnect(); // Solo una vez
-        }
+    // Título desde la izquierda
+    gsap.from(this.titleRef.nativeElement, {
+      x: -100,
+      opacity: 0,
+      duration: 1,
+      ease: 'sine.inOut',
+      scrollTrigger: {
+        trigger: this.titleRef.nativeElement,
+        start: 'top 80%',
+        toggleActions: 'restart none restart none',
       },
-      { threshold: 0.5 } // Cuando entra el 50%
-    );
+    });
 
-    observer.observe(this.titleRef.nativeElement);
+
+    gsap.from(this.divRef.nativeElement, {
+      x: 100,
+      opacity: 0,
+      duration: 1,
+      ease: 'sine.inOut',
+      scrollTrigger: {
+        trigger: this.divRef.nativeElement,
+        start: 'top 80%',
+        toggleActions: 'play none none reverse',
+      },
+    });
   }
-
-
-
-
-
 }
+
