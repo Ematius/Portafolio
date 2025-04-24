@@ -15,8 +15,7 @@ export class ProjectsComponent implements AfterViewInit {
   @ViewChild('titleRef', { static: false }) titleRef!: ElementRef;
   @ViewChild('divRef', { static: false }) divRef!: ElementRef;
 
-  ngAfterViewInit(): void {
-    // Título desde la izquierda
+  ngAfterViewInit(){
     gsap.from(this.titleRef.nativeElement, {
       x: -100,
       opacity: 0,
@@ -28,8 +27,6 @@ export class ProjectsComponent implements AfterViewInit {
         toggleActions: 'restart none restart none',
       },
     });
-
-
     gsap.from(this.divRef.nativeElement, {
       x: 100,
       opacity: 0,
