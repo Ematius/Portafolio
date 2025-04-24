@@ -18,7 +18,6 @@ export class AboutComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     ScrollTrigger.matchMedia({
-
       '(min-width: 1400px)': () => {
         const tl = gsap.timeline({
           scrollTrigger: {
@@ -31,14 +30,12 @@ export class AboutComponent implements AfterViewInit {
           },
         });
 
-
         tl.from(this.cardRef.nativeElement, {
           x: 200,
           opacity: 0,
           duration: 1,
           ease: 'power2.out',
         });
-
 
         tl.from(this.divTextRef.nativeElement, {
           x: -200,
