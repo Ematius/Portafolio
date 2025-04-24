@@ -3,11 +3,14 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+  width: 100vw;
+  padding-top: 5rem;
   h2 {
-    font-size: var(--font-l);
+    font-size: var(--font-m);
     margin-bottom: 1rem;
     color: var(--color-primary);
-    text-shadow: 3px 3px 1px var(--color-tertiary);
+    text-shadow: 2px 2px var(--color-tertiary);
   }
   ul {
     list-style: none;

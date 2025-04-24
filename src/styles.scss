@@ -17,12 +17,9 @@
   --weight-Black: 900;
 
     /* ======= TAMAÑOS DE FUENTE ======= */
---font-xs: clamp(0.8rem, 0.9rem + 0.5vw, 1.2rem);
---font-s: clamp(1rem, 1.1rem + 0.8vw, 1.6rem);
---font-m: clamp(1.2rem, 1.5rem + 1vw, 2.4rem);
---font-base: clamp(1.5rem, 2rem + 1vw, 3rem);
---font-l: clamp(2rem, 2.5rem + 1vw, 3rem);
---font-xl: clamp(3rem, 5rem + 2vw, 7rem);
+--font-s: clamp(1rem, 1.2rem + 0.8vw, 2rem);
+--font-m: clamp(1.5rem, 2.5rem + 1vw, 3.5rem);
+--font-l: clamp(3.5rem, 4.5rem + 1vw, 5.5rem);
 
   /* ========= COLORES DE PALETA =======*/
   --color-primary: #4b1a5e;

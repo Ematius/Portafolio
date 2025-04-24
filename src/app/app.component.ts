@@ -34,7 +34,6 @@ gsap.registerPlugin(ScrollTrigger);
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements AfterViewInit {
-  title = 'Portafolio';
 
   @ViewChildren('sectionRef', { read: ElementRef })
   sections!: QueryList<ElementRef>;

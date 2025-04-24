@@ -2,13 +2,12 @@ article {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
-  
+
   h2 {
-    font-size: var(--font-l);
+    font-size: var(--font-m);
     margin-bottom: 1rem;
     color: var(--color-primary);
-    text-shadow: 3px 3px 1px var(--color-tertiary);
+    text-shadow: 3px 3px var(--color-quaternary);
   }
 
   div {
@@ -58,6 +57,7 @@ article {
       margin: 1rem;
       text-align: left;
       margin-top: 2rem;
+      padding-bottom: 1rem;
       &:nth-child(2) {
         margin-top: 0;
       }
