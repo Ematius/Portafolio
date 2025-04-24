@@ -6,14 +6,15 @@
   font-style: normal;
   font-display: swap;
 }
+
 :root{
    /* ======= FUENTE PRINCIPAL ======= */
   --font-main: 'Tektur', sans-serif;
 
   /* ======= PESOS DE FUENTE ======= */
-  --weight-400: 400; /* Regular */
-  --weight-700: 700; /* Bold */
-  --weight-900: 900; /* Black */
+  --weight-Regular: 400;
+  --weight-Bold: 700;
+  --weight-Black: 900;
 
     /* ======= TAMAÑOS DE FUENTE ======= */
 --font-xs: clamp(0.8rem, 0.9rem + 0.5vw, 1.2rem);
@@ -27,6 +28,7 @@
   --color-primary: #4b1a5e;
   --color-secondary: #7b1978;
   --color-tertiary: #c050b5;
+  --color-quaternary: #f2d3e0;
 }
 
 

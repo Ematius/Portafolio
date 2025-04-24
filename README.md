@@ -26,3 +26,4 @@ Hola, hago una presentación rápida de mi portafolio personal construido con **
 - SCSS con sistema de variables
 - Responsive design con media queries (`min-width: 700px`, `1200px`, `1500px`)
 - Animaciones con `@keyframes`
+- biblioteca Gsap
