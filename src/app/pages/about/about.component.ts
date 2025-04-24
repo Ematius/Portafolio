@@ -39,7 +39,7 @@ export class AboutComponent implements AfterViewInit {
           ease: 'power2.out',
         });
 
-       
+
         tl.from(this.divTextRef.nativeElement, {
           x: -200,
           opacity: 0,

@@ -7,7 +7,7 @@
     "build": "ng build",
     "build:gh": "ng build --output-path docs --base-href /Portafolio",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test -- --coverage"
   },
   "private": true,
   "dependencies": {
