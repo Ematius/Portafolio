@@ -4,14 +4,12 @@ article {
   align-items: center;
   margin: 2rem auto;
   padding: 1rem;
-
   h2 {
-    font-size: var(--font-l);
+    font-size: var(--font-m);
     margin-bottom: 1rem;
     color: var(--color-primary);
     text-shadow: 3px 3px 1px var(--color-tertiary);
   }
-
   div {
     box-shadow: 3px 3px 1px var(--color-secondary);
     &:hover {
@@ -39,4 +37,9 @@ article {
       }
     }
   }
+  .pdfCurriculum{
+    margin-top: 5rem;
+    width: 70%;
+  }
+
 }

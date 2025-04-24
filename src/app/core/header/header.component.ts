@@ -1,6 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { ViewportScroller } from '@angular/common';
-import { NgModule } from '@angular/core';
+import { Component} from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 

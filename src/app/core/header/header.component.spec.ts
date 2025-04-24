@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HeaderComponent } from './header.component';
 
-describe('HeaderComponent', () => {
+describe('Given HeaderComponent', () => {
   let component: HeaderComponent;
   let fixture: ComponentFixture<HeaderComponent>;
 
@@ -17,7 +17,15 @@ describe('HeaderComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('Then should create', () => {
     expect(component).toBeTruthy();
   });
+
+  describe('When the menu is toggled', () => {
+    it('Then should toggle the menu state', () => {
+      const initialState = component.isOpenMenu;
+      component.toggleMenu();
+      expect(component.isOpenMenu).toBe(!initialState);
+    });
+  })
 });
