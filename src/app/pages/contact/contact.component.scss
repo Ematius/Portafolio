@@ -2,15 +2,20 @@ article {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 2rem auto;
-  padding: 1rem;
+  padding-top: 5rem;
   h2 {
     font-size: var(--font-m);
     margin-bottom: 1rem;
     color: var(--color-primary);
     text-shadow: 3px 3px var(--color-quaternary);
   }
+
+  .pdfCurriculum {
+    width: 70%;
+    box-shadow: 3px 3px 1px var(--color-secondary);
+  }
   .update {
+    margin-top: 1rem;
     box-shadow: 3px 3px var(--color-tertiary);
     &:hover {
       scale: (1.1);
@@ -21,7 +26,7 @@ article {
       display: flex;
       text-decoration: none;
       border: 2px solid var(--color-primary);
-      padding: 0.5rem 2rem;
+      padding: 0.5rem 1rem;
       color: var(--color-primary);
 
       &:active {
@@ -36,10 +41,20 @@ article {
       }
     }
   }
-  .pdfCurriculum{
-    margin-top: 5rem;
-    width: 70%;
-   box-shadow: 3px 3px 1px var(--color-secondary);
+  @media(min-width: 600px) {
+    .pdfCurriculum {
+      width: 60%;
+    }
+  }
+    @media(min-width: 800px) {
+    .pdfCurriculum {
+      width: 50%;
+    }
+  }
+    @media(min-width: 1000px) {
+    .pdfCurriculum {
+      width: 40%;
+    }
   }
 
 }

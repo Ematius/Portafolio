@@ -14,7 +14,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { FooterComponent } from './core/footer/footer.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { HeaderComponent } from './core/header/header.component';
-import { KnowledgeComponent } from './pages/knowledge/knowledge.component';
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -28,7 +28,7 @@ gsap.registerPlugin(ScrollTrigger);
     FooterComponent,
     HeaderComponent,
     ProjectsComponent,
-    KnowledgeComponent,
+
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],

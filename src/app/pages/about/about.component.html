@@ -3,19 +3,42 @@
 <div class="divText" #divTextRef>
   <h2>Sobre mí</h2>
   <p> ¡Hola! Soy Emad, un desarrollador que se ha iniciado ya en varios proyectos. Comencé
-    este camino de forma autodidacta, explorando lenguajes como Python y Java por pura curiosidad y pasión. Más adelante,
-    tuve la oportunidad de formarme de manera profesional en el certificado IFCD0210 de Desarrollo de Aplicaciones Web,
-    donde adquirí una base sólida tanto en frontend como en backend. </p>
-  <p> En septiembre comenzare el Grado Superior en Desarrollo de
-    Aplicaciones Web (DAW), con el objetivo de especializarme y seguir aprendiendo cada día. Me defino como una persona
-    creativa, curiosa y con muchas ganas de aportar. Mi meta es clara: convertirme
-    en un desarrollador capaz de enfrentar cualquier reto con entusiasmo y compromiso. </p>
+    este camino de forma autodidacta por pura curiosidad y pasión.
+    Tuve la oportunidad de formarme de manera profesional en el certificado IFCD0210 de Desarrollo de Aplicaciones Web,
+    donde adquirí una base sólida tanto en frontend como en backend adquiriendo la capacidad de desenvolverme con estos
+    <button (click)="toggleSkills()" class="toggle-button">
+      <a>
+        <span class="text">Conocimientos:</span>
+        <span class="line -right"></span>
+        <span class="line -top"></span>
+        <span class="line -left"></span>
+        <span class="line -bottom"></span>
+      </a>
+    </button></p>
+<nav>
+  <div class="container-skills">
+    @if(showSkills) {
+    <ul class="skills-list">
+      @for(icon of icons; track icon.name) {
+      <li class="skill-item">
+        <img [src]="'icons/' + icon.file" [alt]="icon.name + 'logo'"  />
+        <span>{{ icon.name }}</span>
+      </li>
+      }
+    </ul>
+    }
+
+  </div>
+</nav>
+    <p> En septiembre comenzare el Grado Superior en Desarrollo de
+    Aplicaciones Web (DAW), con una meta clara: convertirme
+    en un desarrollador capaz de enfrentar cualquier reto. </p>
 </div>
 
-  <div>
 
+
+  <div class="card-wrapper" >
     <div class="card" #cardRef>
-
       <img src="img/saludo-coleta3D.webp" alt="Avatar" class="avatar" />
       <div class="contact-box">
         <a href="https:/www.linkedin.com/in/emad-kadyear/" target="_blank">
@@ -29,9 +52,6 @@
         </a>
       </div>
     </div>
-
-
-
   </div>
 
 </article>
