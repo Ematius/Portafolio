@@ -7,6 +7,7 @@ article {
   flex-direction: column;
   align-items: center;
 
+
   h2 {
     font-size: var(--font-m);
     margin-bottom: 1rem;
@@ -131,19 +132,30 @@ article {
     }
   }
   .container-skills {
-    width: 300px;
-    height: 300px;
+    width: 90vw;
+    height: 25vh;
     pointer-events: none;
     background: transparent;
+    margin-right: 1rem;
   }
   .skills-list {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
     padding-inline-start: 1rem;
-    gap: 1rem;
-    img {
-      flex-shrink: 0;
+    gap: 2.5rem;
+    .skill-item {
+      display: flex;
+      margin-top: 0.5rem;
+      align-items: center;
+      flex-direction: column;
+      height: 1vh;
+      width: 7vw;
+      span {
+        font-size: var(--font-xs);
+        color: var(--color-primary);
+      }
     }
   }
 
@@ -152,18 +164,11 @@ article {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
     .card {
       position: relative;
-      background: linear-gradient(
-        to bottom,
-        var(--color-primary),
-        var(--color-secondary)
-      );
       width: 300px;
       border: solid 4px var(--color-primary);
       box-shadow: 10px 10px var(--color-primary);
-
       .contact-box {
         display: flex;
         flex-direction: row;
@@ -200,6 +205,42 @@ article {
       }
     }
   }
+  @media (min-width: 600px) {
+    .container-skills {
+      height: 20vh;
+      width: 90vw;
+      .skills-list {
+        gap: 3.5rem;
+      }
+    }
+  }
+  @media (min-width: 800px) {
+    .container-skills {
+      height: 30vh;
+      width: 90vw;
+      .skills-list {
+        gap: 4.5rem;
+      }
+    }
+  }
+  @media (min-width: 1000px) {
+    .container-skills {
+      height: 30vh;
+      width: 90vw;
+      .skills-list {
+        gap: 5.5rem;
+      }
+    }
+  }
+  @media (min-width: 1200px) {
+    .container-skills {
+      height: 30vh;
+      width: 90vw;
+      .skills-list {
+        gap: 6.5rem;
+      }
+    }
+  }
 
   @media (min-width: 1400px) {
     height: 100vh;
@@ -207,6 +248,17 @@ article {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    .container-skills {
+      height: 40vh;
+      width: 50vw;
+      .skills-list {
+        gap: 6.5rem;
+        .skill-item {
+          height: 1vh;
+          width: 5vw;
+        }
+      }
+    }
     .divText,
     .card {
       opacity: 1;

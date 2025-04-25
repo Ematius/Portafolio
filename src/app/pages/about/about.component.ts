@@ -63,38 +63,33 @@ export class AboutComponent implements AfterViewInit {
   @ViewChild('cardRef', { static: true }) cardRef!: ElementRef;
 
   ngAfterViewInit(): void {
-    ScrollTrigger.matchMedia({
-      '(min-width: 1400px)': () => {
-        const tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: this.articleRef.nativeElement,
-            start: 'top top',
-            end: '+=2000',
-            scrub: true,
-            pin: true,
-            markers: false,
-          },
-        });
+    const mediaQuery = window.matchMedia('(min-width: 1400px)');
+    if (mediaQuery.matches) {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: this.articleRef.nativeElement,
+          start: 'top center',
+          end: '+=1000',
+          scrub: true,
+          pin: true,
+          markers: true,
+        },
+      });
 
-        tl.from(this.cardRef.nativeElement, {
-          x: 200,
-          opacity: 0,
-          duration: 1,
-          ease: 'power2.out',
-        });
+      tl.from(this.cardRef.nativeElement, {
+        x: 200,
+        opacity: 0,
+        duration: 1,
+        ease: 'power2.out',
+      });
 
-        tl.from(this.divTextRef.nativeElement, {
-          x: -200,
-          opacity: 0,
-          duration: 1,
-          ease: 'power2.out',
-        });
-      },
+      tl.from(this.divTextRef.nativeElement, {
+        x: -200,
+        opacity: 0,
+        duration: 1,
+        ease: 'power2.out',
+      });
 
-      // Otras resoluciones: nada, o animaciones alternativas si querés
-      all: () => {
-        // Esto se ejecuta siempre. Útil si querés limpiar cosas, resetear estilos, etc.
-      },
-    });
+    }
   }
 }

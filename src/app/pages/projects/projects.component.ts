@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -11,11 +11,11 @@ gsap.registerPlugin(ScrollTrigger);
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss',
 })
-export class ProjectsComponent implements AfterViewInit {
+export class ProjectsComponent implements OnInit {
   @ViewChild('titleRef', { static: false }) titleRef!: ElementRef;
   @ViewChild('divRef', { static: false }) divRef!: ElementRef;
 
-  ngAfterViewInit(){
+  ngOnInit(){
     gsap.from(this.titleRef.nativeElement, {
       x: -100,
       opacity: 0,
