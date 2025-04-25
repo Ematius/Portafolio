@@ -8,13 +8,12 @@ article {
     font-size: var(--font-m);
     margin-bottom: 1rem;
     color: var(--color-primary);
-    text-shadow: 3px 3px 1px var(--color-tertiary);
+    text-shadow: 3px 3px var(--color-quaternary);
   }
-  div {
-    box-shadow: 3px 3px 1px var(--color-secondary);
+  .update {
+    box-shadow: 3px 3px var(--color-tertiary);
     &:hover {
       scale: (1.1);
-      background-color: var(--color-tertiary);
       transition: all 0.2s ease-in-out;
     }
 
@@ -40,6 +39,7 @@ article {
   .pdfCurriculum{
     margin-top: 5rem;
     width: 70%;
+   box-shadow: 3px 3px 1px var(--color-secondary);
   }
 
 }
