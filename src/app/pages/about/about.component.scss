@@ -1,3 +1,7 @@
+$thick: 2px;
+$pad: 0.7em;
+$extra: calc(#{$pad} * 1.2);
+
 article {
   display: flex;
   flex-direction: column;
@@ -8,6 +12,139 @@ article {
     margin-bottom: 1rem;
     color: var(--color-primary);
     text-shadow: 3px 3px var(--color-quaternary);
+  }
+  .toggle-button {
+    display: inline-block;
+    border: none;
+    background-color: var(--color-primary);
+
+    a {
+      color: white;
+      display: inline-block;
+      border: $thick solid transparent;
+      position: relative;
+      cursor: pointer;
+      .text {
+        text-align: center;
+        transform: translate3d(0, $pad, 0);
+        transition: transform 0.4s cubic-bezier(0.2, 0, 0, 1) 0.4s;
+      }
+
+      &:after {
+        position: absolute;
+        content: "";
+        bottom: -$thick;
+        left: $extra;
+        right: $extra;
+        height: $thick;
+        background: var(--color-quaternary);
+        transition: transform 0.8s cubic-bezier(1, 0, 0.37, 1) 0.2s,
+          right 0.2s cubic-bezier(0.04, 0.48, 0, 1) 0.6s,
+          left 0.4s cubic-bezier(0.04, 0.48, 0, 1) 0.6s;
+        transform-origin: left;
+      }
+    }
+    .line {
+      position: absolute;
+      background: var(--color-quaternary);
+
+      &.-right,
+      &.-left {
+        width: $thick;
+        bottom: -$thick;
+        top: -$thick;
+        transform: scale3d(1, 0, 1);
+      }
+
+      &.-top,
+      &.-bottom {
+        height: $thick;
+        left: -$thick;
+        right: -$thick;
+        transform: scale3d(0, 1, 1);
+      }
+
+      &.-right {
+        right: -$thick;
+        transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.23s;
+        transform-origin: top;
+      }
+
+      &.-top {
+        top: -$thick;
+        transition: transform 0.08s linear 0.43s;
+        transform-origin: left;
+      }
+
+      &.-left {
+        left: -$thick;
+        transition: transform 0.08s linear 0.51s;
+        transform-origin: bottom;
+      }
+
+      &.-bottom {
+        bottom: -$thick;
+        transition: transform 0.3s cubic-bezier(1, 0, 0.65, 1.01);
+        transform-origin: right;
+      }
+    }
+
+    a:hover,
+    a:active {
+      .text {
+        transform: translate3d(0, 0, 0);
+        transition: transform 0.6s cubic-bezier(0.2, 0, 0, 1) 0.4s;
+      }
+
+      &:after {
+        transform: scale3d(0, 1, 1);
+        right: -$thick;
+        left: -$thick;
+        transform-origin: right;
+        transition: transform 0.2s cubic-bezier(1, 0, 0.65, 1.01) 0.17s,
+          right 0.2s cubic-bezier(1, 0, 0.65, 1.01), left 0s 0.3s;
+      }
+
+      .line {
+        transform: scale3d(1, 1, 1);
+
+        &.-right {
+          transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.2s;
+          transform-origin: bottom;
+        }
+
+        &.-top {
+          transition: transform 0.08s linear 0.4s;
+          transform-origin: right;
+        }
+
+        &.-left {
+          transition: transform 0.08s linear 0.48s;
+          transform-origin: top;
+        }
+
+        &.-bottom {
+          transition: transform 0.5s cubic-bezier(0, 0.53, 0.29, 1) 0.56s;
+          transform-origin: left;
+        }
+      }
+    }
+  }
+  .container-skills {
+    width: 300px;
+    height: 300px;
+    pointer-events: none;
+    background: transparent;
+  }
+  .skills-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding-inline-start: 1rem;
+    gap: 1rem;
+    img {
+      flex-shrink: 0;
+    }
   }
 
   div {
@@ -70,17 +207,18 @@ article {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-     .divText, .card {
-    opacity: 1;
-  }
+    .divText,
+    .card {
+      opacity: 1;
+    }
     .divText {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 50%;
-        text-align: justify;
-      }
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      text-align: justify;
+    }
 
     div {
       display: flex;
