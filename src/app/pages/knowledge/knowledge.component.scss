@@ -3,41 +3,42 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 50vh;
   width: 100vw;
-  padding-top: 5rem;
   h2 {
     font-size: var(--font-m);
     margin-bottom: 1rem;
     color: var(--color-primary);
-    text-shadow: 2px 2px var(--color-tertiary);
+    text-shadow: 2px 2px var(--color-quaternary);
   }
-  ul {
+  /* src/app/components/skills/skills.component.scss */
+  .skills-list {
     list-style: none;
-    padding: 0;
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
+    padding-inline-start: 1rem;
 
-    li {
-      width: 30%;
-      height: 40px;
-      background: var(--color-primary);
-      border-radius: 20px;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: var(--font-xs);
-      font-weight: var(--weight-400);
-      box-shadow: 3px 4px 1px var(--color-tertiary);
-      margin: 0.3rem;
+    gap: 1rem;
+    .skill-item {
+      &:hover {
+        transform: scale(1.05);
+        span{
+          display: block;
+          text-align: center;
+          font-size: .5rem;
+        }
+      }
     }
-    li:hover {
-      scale: (1.1);
+
+    img {
+      flex-shrink: 0;
+    }
+
+    span {
+      display: none ;
     }
   }
+
   @media (min-width: 1400px) {
     ul {
       li {

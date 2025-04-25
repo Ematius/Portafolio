@@ -1,0 +1,32 @@
+# Forzar saltos de línea estilo Unix (LF) en todos los archivos de texto
+* text=auto eol=lf
+
+# Archivos específicos
+*.ts     text eol=lf
+*.js     text eol=lf
+*.html   text eol=lf
+*.scss   text eol=lf
+*.css    text eol=lf
+*.json   text eol=lf
+*.md     text eol=lf
+*.svg    text eol=lf
+*.yml    text eol=lf
+
+# Imágenes y binarios: no tocar los saltos de línea
+*.png    binary
+*.jpg    binary
+*.jpeg   binary
+*.gif    binary
+*.ico    binary
+*.webp   binary
+*.mp4    binary
+*.woff   binary
+*.woff2  binary
+*.ttf    binary
+
+# Evitar reescrituras innecesarias de Prettier y ESLint
+*.prettierrc text eol=lf
+*.eslintrc   text eol=lf
+
+# Angular environments
+*.env.* text eol=lf
