@@ -10,9 +10,10 @@ import { CommonModule } from '@angular/common';
 })
 export class HeaderComponent {
 
-  isOpenMenu = false;
+  isOpenMenu:boolean = false;
 
   toggleMenu() {
     this.isOpenMenu = !this.isOpenMenu;
   }
+
 }

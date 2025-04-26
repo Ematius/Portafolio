@@ -5,21 +5,32 @@ footer {
   gap: 1rem;
   margin: 0.5rem;
   min-height: 20%;
+
   p {
     font-size: var(--font-xs);
     color: var(--color-primary);
   }
+
   a {
     width: 2rem;
     height: auto;
-    filter:drop-shadow(1px 1px 1px var(--color-tertiary));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(1px 1px 1px var(--color-tertiary));
+
+    img {
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s ease-in-out;
+    }
+
     &:hover {
       transform: scale(1.2);
-      transition: all 0.3s ease-in-out;
     }
   }
-  div {
 
+  div {
     width: 4rem;
     height: auto;
     overflow: hidden;
@@ -32,7 +43,7 @@ footer {
       opacity: 0;
       transform: translateY(20px);
       transition: opacity 1s ease, transform 1s ease;
-      filter:drop-shadow(3px 3px 1px var(--color-primary));
+      filter: drop-shadow(3px 3px 1px var(--color-primary));
 
       &.visible {
         opacity: 1;
@@ -42,10 +53,7 @@ footer {
   }
 
   @media (min-width: 1400px) {
-    
     a {
-      display: flex;
-      justify-content: center;
       img {
         width: 5rem;
       }

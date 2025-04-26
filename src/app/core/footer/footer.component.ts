@@ -4,14 +4,13 @@ import { AfterViewInit, Component, ViewChild, ElementRef } from '@angular/core';
   selector: 'app-footer',
   imports: [],
   templateUrl: './footer.component.html',
-  styleUrl: './footer.component.scss'
+  styleUrl: './footer.component.scss',
 })
 export class FooterComponent implements AfterViewInit {
+  @ViewChild('img') img!: ElementRef;
+  isVisible = false;
 
-@ViewChild('img') img!:ElementRef;
-isVisible = false;
-
-ngAfterViewInit(): void {
+  ngAfterViewInit(): void {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -27,4 +26,3 @@ ngAfterViewInit(): void {
     observer.observe(this.img.nativeElement);
   }
 }
-

@@ -3,6 +3,7 @@ article {
   flex-direction: column;
   align-items: center;
   padding-top: 10rem;
+
   h2 {
     font-size: var(--font-m);
     margin-bottom: 1rem;
@@ -14,20 +15,24 @@ article {
     width: 70%;
     box-shadow: 3px 3px 1px var(--color-secondary);
   }
+
   .update {
     margin-top: 1rem;
     box-shadow: 3px 3px var(--color-tertiary);
+    transition: transform 0.2s ease-in-out; // Mejor transición específica
+
     &:hover {
-      scale: (1.1);
-      transition: all 0.2s ease-in-out;
+      transform: scale(1.1); // Corregido el error de sintaxis
     }
 
     a {
       display: flex;
+      align-items: center;
       text-decoration: none;
       border: 2px solid var(--color-primary);
       padding: 0.5rem 1rem;
       color: var(--color-primary);
+      gap: 1rem; // mejor separación que margin-right manual
 
       &:active {
         background-color: var(--color-primary);
@@ -37,34 +42,37 @@ article {
       img {
         width: 1.3rem;
         height: 1.3rem;
-        margin-right: 2rem;
       }
     }
   }
-  @media(min-width: 600px) {
+
+  @media (min-width: 600px) {
     .pdfCurriculum {
       width: 60%;
     }
   }
-    @media(min-width: 800px) {
+
+  @media (min-width: 800px) {
     .pdfCurriculum {
       width: 50%;
     }
   }
-    @media(min-width: 1000px) {
+
+  @media (min-width: 1000px) {
     .pdfCurriculum {
       width: 40%;
     }
   }
-  @media(min-width: 1600px) {
+
+  @media (min-width: 1600px) {
     .pdfCurriculum {
       width: 30%;
     }
   }
-  @media(min-width: 2200px) {
+
+  @media (min-width: 2200px) {
     .pdfCurriculum {
       width: 25%;
     }
   }
-
 }
