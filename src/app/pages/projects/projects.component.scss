@@ -2,14 +2,15 @@ article {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 90vh;
   background-color: var(--color-primary);
+  border: 1 px solid var(--color-quaternary);
+
   h2 {
     color: white;
     font-size: var(--font-m);
     text-shadow: 3px 3px var(--color-tertiary);
   }
-  .title {
+  .projects-mobile {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -17,8 +18,8 @@ article {
     gap: 1rem;
     margin-top: 2rem;
     img {
-      width: 100px;
-      height: 100px;
+      width: 50vw;
+      height: 25vh;
     }
   }
   .projects {
@@ -35,7 +36,7 @@ article {
       color: var(--color-quaternary);
       text-shadow: 2.5px 1px var(--color-tertiary);
     }
-    .title {
+    .projects-mobile{
       display: none
     }
     .projects {
