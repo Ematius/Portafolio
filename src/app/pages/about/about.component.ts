@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
+import { Component, } from '@angular/core';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss'],
 })
-export class AboutComponent implements AfterViewInit {
+export class AboutComponent {
   showSkills = false;
 
   toggleSkills() {
@@ -58,38 +58,5 @@ export class AboutComponent implements AfterViewInit {
     { name: 'Postman', file: 'postman.svg' },
   ];
 
-  @ViewChild('articleRef', { static: true }) articleRef!: ElementRef;
-  @ViewChild('divTextRef', { static: true }) divTextRef!: ElementRef;
-  @ViewChild('cardRef', { static: true }) cardRef!: ElementRef;
 
-  ngAfterViewInit(): void {
-    const mediaQuery = window.matchMedia('(min-width: 1400px)');
-    if (mediaQuery.matches) {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: this.articleRef.nativeElement,
-          start: 'top center',
-          end: '+=1000',
-          scrub: true,
-          pin: true,
-          markers: true,
-        },
-      });
-
-      tl.from(this.cardRef.nativeElement, {
-        x: 200,
-        opacity: 0,
-        duration: 1,
-        ease: 'power2.out',
-      });
-
-      tl.from(this.divTextRef.nativeElement, {
-        x: -200,
-        opacity: 0,
-        duration: 1,
-        ease: 'power2.out',
-      });
-
-    }
-  }
 }
