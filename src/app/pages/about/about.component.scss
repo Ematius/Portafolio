@@ -6,6 +6,7 @@ article {
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 100vh;
   .about-wrapper {
     display: flex;
     justify-content: center;
@@ -246,6 +247,7 @@ article {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    margin-top: 10rem;
     .about-wrapper {
       width: 50%;
       .container-skills {
@@ -292,6 +294,22 @@ article {
           .skill-item {
             height: 1vh;
             width: 2vw;
+          }
+        }
+      }
+    }
+  }
+  @media(min-width: 2200px){
+    .about-wrapper {
+      width: 30%;
+      .container-skills {
+        width: 20vw;
+        height: 16rem;
+        .skills-list {
+          gap: 2.7rem;
+          .skill-item {
+            height: 1vh;
+            width: 1.5vw;
           }
         }
       }
