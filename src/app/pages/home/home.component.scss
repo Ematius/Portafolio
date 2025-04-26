@@ -6,9 +6,9 @@ article {
   font-size: var(--font-m);
   font-weight: var(--weight-Regular);
   color: var(--color-primary);
- 
+  height: 100vh;
   .containerImg {
-    h1,h3{
+    h1{
       font-weight: var(--weight-Black);
       text-align: center;
       text-shadow: 3px 3px  var(--color-quaternary);

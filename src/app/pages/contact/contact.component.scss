@@ -2,7 +2,7 @@ article {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 5rem;
+  padding-top: 10rem;
   h2 {
     font-size: var(--font-m);
     margin-bottom: 1rem;
@@ -54,6 +54,16 @@ article {
     @media(min-width: 1000px) {
     .pdfCurriculum {
       width: 40%;
+    }
+  }
+  @media(min-width: 1600px) {
+    .pdfCurriculum {
+      width: 30%;
+    }
+  }
+  @media(min-width: 2200px) {
+    .pdfCurriculum {
+      width: 25%;
     }
   }
 
