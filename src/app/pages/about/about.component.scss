@@ -7,7 +7,7 @@ article {
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-     margin-top: 10rem;
+  margin-top: 10rem;
   .about-wrapper {
     display: flex;
     justify-content: center;
@@ -146,7 +146,6 @@ article {
       pointer-events: none;
       background: transparent;
       margin-right: 1rem;
-
       .skills-list {
         list-style: none;
         display: flex;
@@ -188,7 +187,6 @@ article {
         width: 100%;
         border: solid 1px var(--color-primary);
         height: 50px;
-
         a {
           img {
             width: 35px;
@@ -203,7 +201,6 @@ article {
         }
       }
     }
-
     p {
       font-size: var(--font-s);
       font-weight: var(--weight-400);
@@ -264,10 +261,9 @@ article {
       }
     }
   }
-  @media(min-width: 1100px){
+  @media (min-width: 1100px) {
     .about-wrapper {
       .container-skills {
-
         height: 16rem;
         .skills-list {
           gap: 2.5rem;
@@ -279,13 +275,13 @@ article {
       }
     }
   }
-  @media(min-width: 1400px){
+  @media (min-width: 1400px) {
     .about-wrapper {
       width: 40%;
     }
   }
-  @media(min-width: 1700px){
-   .about-wrapper {
+  @media (min-width: 1700px) {
+    .about-wrapper {
       width: 35%;
       .container-skills {
         width: 25vw;
@@ -300,7 +296,7 @@ article {
       }
     }
   }
-  @media(min-width: 2200px){
+  @media (min-width: 2200px) {
     .about-wrapper {
       width: 30%;
       .container-skills {
@@ -316,6 +312,4 @@ article {
       }
     }
   }
-
-
 }

@@ -1,8 +1,6 @@
 import { Component, } from '@angular/core';
 import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-gsap.registerPlugin(ScrollTrigger);
 
 @Component({
   selector: 'app-about',
@@ -56,6 +54,7 @@ export class AboutComponent {
     { name: 'Prettier', file: 'prettier.svg' },
     { name: 'ESLint', file: 'ESLint.svg' },
     { name: 'Postman', file: 'postman.svg' },
+    { name: 'GitHub', file: 'Git.svg' },
   ];
 
 
