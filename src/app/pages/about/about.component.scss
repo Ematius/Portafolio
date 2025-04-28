@@ -154,6 +154,7 @@ article {
         padding-inline-start: 1rem;
         gap: 2rem;
         .skill-item {
+          visibility: hidden;
           display: flex;
           margin: 0.5rem;
           align-items: center;
@@ -313,3 +314,5 @@ article {
     }
   }
 }
+
+

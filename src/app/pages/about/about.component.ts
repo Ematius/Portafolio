@@ -15,12 +15,12 @@ export class AboutComponent {
   toggleSkills() {
     if (this.showSkills) {
       gsap.to('.skill-item', {
-        opacity: 0,
+        autoAlpha: 0,
         scale: 0.5,
-        y: -20,
-        stagger: 0.05,
+        y: -40,
+        stagger: 0.2,
         duration: 0.5,
-        ease: 'power2.in',
+        ease: 'sine.in',
         onComplete: () => {
           this.showSkills = false;
         },
@@ -29,12 +29,12 @@ export class AboutComponent {
       this.showSkills = true;
       setTimeout(() => {
         gsap.from('.skill-item', {
-          opacity: 0,
+          autoAlpha: 0,
           scale: 0.5,
-          y: -20,
-          stagger: 0.05,
-          duration: 0.6,
-          ease: 'power2.out',
+          y: -40,
+          stagger: 0.2,
+          duration: 0.5,
+          ease: 'sine.out',
         });
       });
     }
