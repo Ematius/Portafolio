@@ -8,29 +8,29 @@ Tektur is a variable font with these axes:
   wght
 
 This means all the styles are contained in a single file:
-  Tektur-VariableFont_wdth,wght.ttf
+  Tektur/Tektur-VariableFont_wdth,wght.ttf
 
 If your app fully supports variable fonts, you can now pick intermediate styles
 that aren’t available as static fonts. Not all apps support variable fonts, and
 in those cases you can use the static font files for Tektur:
-  static/Tektur_Condensed-Regular.ttf
-  static/Tektur_Condensed-Medium.ttf
-  static/Tektur_Condensed-SemiBold.ttf
-  static/Tektur_Condensed-Bold.ttf
-  static/Tektur_Condensed-ExtraBold.ttf
-  static/Tektur_Condensed-Black.ttf
-  static/Tektur_SemiCondensed-Regular.ttf
-  static/Tektur_SemiCondensed-Medium.ttf
-  static/Tektur_SemiCondensed-SemiBold.ttf
-  static/Tektur_SemiCondensed-Bold.ttf
-  static/Tektur_SemiCondensed-ExtraBold.ttf
-  static/Tektur_SemiCondensed-Black.ttf
-  static/Tektur-Regular.ttf
-  static/Tektur-Medium.ttf
-  static/Tektur-SemiBold.ttf
-  static/Tektur-Bold.ttf
-  static/Tektur-ExtraBold.ttf
-  static/Tektur-Black.ttf
+  Tektur/static/Tektur_Condensed-Regular.ttf
+  Tektur/static/Tektur_Condensed-Medium.ttf
+  Tektur/static/Tektur_Condensed-SemiBold.ttf
+  Tektur/static/Tektur_Condensed-Bold.ttf
+  Tektur/static/Tektur_Condensed-ExtraBold.ttf
+  Tektur/static/Tektur_Condensed-Black.ttf
+  Tektur/static/Tektur_SemiCondensed-Regular.ttf
+  Tektur/static/Tektur_SemiCondensed-Medium.ttf
+  Tektur/static/Tektur_SemiCondensed-SemiBold.ttf
+  Tektur/static/Tektur_SemiCondensed-Bold.ttf
+  Tektur/static/Tektur_SemiCondensed-ExtraBold.ttf
+  Tektur/static/Tektur_SemiCondensed-Black.ttf
+  Tektur/static/Tektur-Regular.ttf
+  Tektur/static/Tektur-Medium.ttf
+  Tektur/static/Tektur-SemiBold.ttf
+  Tektur/static/Tektur-Bold.ttf
+  Tektur/static/Tektur-ExtraBold.ttf
+  Tektur/static/Tektur-Black.ttf
 
 Get started
 -----------
