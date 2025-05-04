@@ -1,15 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
 @font-face {
-  src: url('assets/fonts/Tektur.ttf') format('truetype');
+  src: url('assets/fonts/Tektur/Tektur-VariableFont_wdth\,wght.ttf') format('truetype');
   font-family: 'Tektur';
   font-weight: 400 900;
-  font-style: normal;
+
+}
+@font-face {
+  src: url('assets/fonts/Roboto/Roboto-VariableFont_wdth\,wght.ttf') format('truetype');
+  font-family: 'Roboto';
+  font-weight: 400 900;
   font-display: swap;
 }
 
 :root{
    /* ======= FUENTE PRINCIPAL ======= */
   --font-main: 'Tektur', sans-serif;
+  --font-text: 'Roboto', sans-serif;
 
   /* ======= PESOS DE FUENTE ======= */
   --weight-Regular: 400;
@@ -17,16 +23,27 @@
   --weight-Black: 900;
 
     /* ======= TAMAÑOS DE FUENTE ======= */
---font-xs: clamp(0.5rem, 0.6rem + 0.2vw, 1rem);
---font-s: clamp(1rem, 1.2rem + 0.8vw, 2rem);
+
+--font-s: clamp(0.5rem, 1rem + 0.8vw, 1.5rem);
+--font-ms: clamp(1rem, 1.5rem + 0.8vw, 2rem);
 --font-m: clamp(1.5rem, 2.5rem + 1vw, 3.5rem);
 --font-l: clamp(3.5rem, 4.5rem + 1vw, 5.5rem);
+
 
   /* ========= COLORES DE PALETA =======*/
   --color-primary: #4b1a5e;
   --color-secondary: #7b1978;
   --color-tertiary: #c050b5;
   --color-quaternary: #f2d3e0;
+
+   /* === width and heights === */
+
+  --width-xs: clamp(100px, 20vw, 200px);
+  --width-s: clamp(150px, 40vw, 300px);
+  --width-m: clamp(250px, 60vw, 500px);
+  --width-l: clamp(350px, 80vw, 800px);
+  --width-xl: clamp(450px, 100vw, 1000px);
+
 }
 
 

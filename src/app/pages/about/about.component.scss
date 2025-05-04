@@ -14,8 +14,14 @@ article {
     align-items: center;
     flex-direction: column;
     p {
+      font-family: var(--font-text);
+      font-size: var(--font-s);
+      font-weight: var(--weight-400);
+      color: var(--color-primary);
       margin: 1rem;
-      text-align: justify;
+      text-align: left;
+      margin-top: 2rem;
+      padding-bottom: 1rem;
     }
     h2 {
       font-size: var(--font-m);
@@ -176,7 +182,7 @@ article {
     flex-direction: column;
     .card {
       position: relative;
-      width: 300px;
+      width: var(--width-m);
       border: solid 4px var(--color-primary);
       box-shadow: 10px 10px var(--color-primary);
       .contact-box {
@@ -202,15 +208,7 @@ article {
         }
       }
     }
-    p {
-      font-size: var(--font-s);
-      font-weight: var(--weight-400);
-      color: var(--color-primary);
-      margin: 1rem;
-      text-align: left;
-      margin-top: 2rem;
-      padding-bottom: 1rem;
-    }
+
   }
   @media (min-width: 500px) {
     .about-wrapper {
@@ -240,7 +238,14 @@ article {
           }
         }
       }
+
     }
+     .card-wrapper{
+      p {
+        font-size:var(--font-m);
+      }
+    }
+
   }
   @media (min-width: 900px) {
     display: flex;
@@ -300,6 +305,9 @@ article {
   @media (min-width: 2200px) {
     .about-wrapper {
       width: 30%;
+      p{
+        font-size: var(--font-ms);
+      }
       .container-skills {
         width: 20vw;
         height: 16rem;
@@ -313,6 +321,7 @@ article {
       }
     }
   }
+
 }
 
 
