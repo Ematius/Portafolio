@@ -27,7 +27,7 @@ article {
       transition: width 0.5s ease, opacity 0.5s ease, filter 0.5s ease;
 
       &:hover {
-        cursor: url('/icons/pointer-3d.svg') 32 32, auto;
+        cursor: pointer;
         width: 30vw;
         height: 100%;
         opacity: 1;
