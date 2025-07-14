@@ -1,4 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
+
 @font-face {
   src: url('assets/fonts/Tektur/Tektur-VariableFont_wdth\,wght.ttf') format('truetype');
   font-family: 'Tektur';
@@ -13,16 +13,16 @@
 }
 
 :root{
-   /* ======= FUENTE PRINCIPAL ======= */
+   /* ======= Font family ======= */
   --font-main: 'Tektur', sans-serif;
   --font-text: 'Roboto', sans-serif;
 
-  /* ======= PESOS DE FUENTE ======= */
+  /* ======= Font weight ======= */
   --weight-Regular: 400;
   --weight-Bold: 700;
   --weight-Black: 900;
 
-    /* ======= TAMAÑOS DE FUENTE ======= */
+    /* ======= Font size ======= */
 
 --font-s: clamp(0.5rem, 1rem + 0.8vw, 1.5rem);
 --font-ms: clamp(1rem, 1.5rem + 0.8vw, 2rem);
@@ -30,7 +30,7 @@
 --font-l: clamp(3.5rem, 4.5rem + 1vw, 5.5rem);
 
 
-  /* ========= COLORES DE PALETA =======*/
+  /* ========= Color paletee =======*/
   --color-primary: #4b1a5e;
   --color-secondary: #7b1978;
   --color-tertiary: #c050b5;
