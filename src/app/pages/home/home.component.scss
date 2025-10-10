@@ -54,12 +54,13 @@ article {
     width: 100%;
     .h1-wrapper {
       height: 10rem;
-      width: 25rem;
-      overflow: hidden; // por seguridad
+      width: 50rem;
+      overflow: hidden;
       display: flex;
       justify-content: center;
       align-items: center;
       h1 {
+        font-size: var(--font-m);
         font-weight: var(--weight-Black);
         text-align: center;
         text-shadow: 3px 3px var(--color-quaternary);
@@ -80,6 +81,7 @@ article {
     }
   }
 
+
   @media (min-width: 1200px) {
     position: relative;
     overflow: hidden;
@@ -91,6 +93,13 @@ article {
       justify-content: center;
       align-items: center;
       width: 100%;
+      .h1-wrapper {
+
+      h1 {
+        font-size: var(--font-l);
+
+      }
+    }
 
       .photo {
         img {
