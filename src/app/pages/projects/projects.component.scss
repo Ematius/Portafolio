@@ -12,66 +12,86 @@ article {
     text-shadow: 3px 3px var(--color-tertiary);
   }
 
-  // .titleProjects {
-  //   display: flex;
-  //   width: 80%;
-  //   aspect-ratio: 10 / 0.5;
-  //   max-width: 100%;
-  //   z-index:100;
-  //  img {
-  //   flex-grow: 1;
-  //   object-fit: cover;
-  //   transition: height 0.5s ease, opacity 0.5s ease, filter 0.5s ease;
-
-  //   &:hover {
-  //     cursor: pointer;
-  //     height: 30vh;
-  //     width: 10%;
-  //     opacity: 1;
-  //     filter: contrast(120%);
-  //   }
-  // }
-  // }
-
   .projects {
     display: flex;
     width: 80%;
     aspect-ratio: 5 / 2;
-    transition: width 0.5s ease;
+    transition: width 0.9s ease-in-out;
     max-width: 100%;
 
-    img {
-      width: 0px;
+    .project {
+      position: relative;
+      width: 0;
       flex-grow: 1;
-      object-fit: cover;
-      opacity: 0.8;
-      transition: width 0.5s ease, opacity 0.5s ease, filter 0.5s ease;
+      overflow: hidden;
+      transition: width 0.7s ease-in-out;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.8;
+        transition: opacity 0.9s ease-in-out, filter 0.9s ease-in-out, width 1.2s ease-in-out;
+      }
 
       &:hover {
         cursor: pointer;
         width: 30vw;
-        height: 100%;
+
+        img {
+          opacity: 1;
+          filter: contrast(120%);
+        }
+      }
+
+      figcaption {
+        position: absolute;
+        inset: auto 0 0 0;
+        padding: 1rem 1.25rem;
+        color: white;
+        background: linear-gradient(0deg, rgba(0,0,0,0.75), rgba(0,0,0,0.4) 60%, transparent);
+        transform: translateY(70%);
+        transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out;
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      &:hover figcaption,
+      &:focus-within figcaption {
+        transform: translateY(0%);
         opacity: 1;
-        filter: contrast(120%);
+      }
+
+      figcaption h3 {
+        margin: 0 0 0.25rem 0;
+        font-size: clamp(1rem, 1.2vw, 1.25rem);
+      }
+
+      figcaption ul {
+        margin: 0;
+        padding-left: 1rem;
+        font-size: clamp(0.85rem, 1vw, 1rem);
+        line-height: 1.35;
       }
     }
   }
 
-  @media (min-width: 1800px) {
+  @media (hover: none) {
     .projects {
-      width: 70%;
+      aspect-ratio: auto;
+
+      .project {
+        width: 33.333%;
+
+        figcaption {
+          transform: translateY(0%);
+          opacity: 1;
+        }
+      }
     }
   }
 
-  @media (min-width: 2000px) {
-    .projects {
-      width: 65%;
-    }
-  }
-
-  @media (min-width: 2200px) {
-    .projects {
-      max-width: 60%;
-    }
-  }
+  @media (min-width: 1800px) { .projects { width: 70%; } }
+  @media (min-width: 2000px) { .projects { width: 65%; } }
+  @media (min-width: 2200px) { .projects { max-width: 60%; } }
 }
