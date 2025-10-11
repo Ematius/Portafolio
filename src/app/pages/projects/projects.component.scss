@@ -81,11 +81,10 @@ article {
       aspect-ratio: auto;
 
       .project {
-        width: 33.333%;
+        width: 33%;
 
         figcaption {
-          transform: translateY(0%);
-          opacity: 1;
+          display: none;
         }
       }
     }
